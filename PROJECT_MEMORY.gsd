@@ -1,0 +1,348 @@
+# PROJECT MEMORY: branding-dadik
+# Generated: 2026-01-19
+# Purpose: Complete project analysis and structure documentation
+
+================================================================================
+## PROJECT OVERVIEW
+================================================================================
+
+Name: branding-dadik
+Type: Personal Branding Website / Landing Page
+Owner: Dadik Wahyu Chang (Strategic Brand Consultant)
+Company: UTERO Indonesia
+Location: Rumah Merah OXYZ, Malang, Indonesia
+Established: Since 1998
+
+### PROJECT MISSION
+Helping businesses transition from "Commodities" to "Legacies" through the 
+fusion of Creative Strategy & Legal Protection (HAKI/Intellectual Property).
+
+### BRAND PHILOSOPHY
+- Color Identity: RED (Merah) - Represents passion, optimism, and courage
+- Tagline: "Branding Bukan Akting" (Branding is Not Acting)
+- Motto: "Ide tanpa realisasi adalah sampah" (Ideas without execution are garbage)
+
+================================================================================
+## TECHNOLOGY STACK
+================================================================================
+
+### Core Framework
+- Next.js: 16.1.1 (Latest with React Compiler)
+- React: 19.2.3
+- React DOM: 19.2.3
+- TypeScript: ^5
+
+### Styling
+- TailwindCSS: ^4 (Latest)
+- PostCSS with @tailwindcss/postcss: ^4
+
+### Animation
+- Framer Motion: ^12.23.26
+
+### Icons
+- Lucide React: ^0.562.0
+
+### Build Tools
+- ESLint: ^9 with eslint-config-next
+- Babel Plugin React Compiler: 1.0.0
+- React Compiler: Enabled in next.config.ts
+
+### Configuration Files
+- tsconfig.json: Bundler module resolution, strict mode
+- next.config.ts: React Compiler enabled
+- postcss.config.mjs: TailwindCSS PostCSS
+- eslint.config.mjs: Next.js ESLint config
+
+================================================================================
+## DIRECTORY STRUCTURE
+================================================================================
+
+branding-dadik/
+|-- .git/                    # Git repository
+|-- .next/                   # Next.js build output
+|-- node_modules/            # Dependencies (not tracked)
+|-- public/                  # Static assets
+|   |-- images/
+|   |   |-- awards/          # Award trophy image
+|   |   |   |-- award.png
+|   |   |-- brand-overview/  # Hero slider images (1-12.png)
+|   |   |-- bukan-acting/    # Philosophy images
+|   |   |   |-- img-1.jpg
+|   |   |   |-- img-2.jpg
+|   |   |-- clients/         # Client logos
+|   |   |   |-- clients.png
+|   |   |-- logos/           # Partner logos
+|   |   |   |-- AAM.png      # Asosiasi Advertising Malang
+|   |   |   |-- ADGI.webp    # Asosiasi Desain Grafis Indonesia
+|   |   |   |-- ICCN.png     # Indonesian Creative Cities Network
+|   |   |   |-- MCF.png      # Malang Creative Fusion
+|   |   |   |-- MCC.png      # Malang Creative Center
+|   |   |-- maps/            # Strategic framework images
+|   |   |   |-- blueprint-kota-kreatif.png
+|   |   |   |-- branding model canvas.jpg
+|   |   |   |-- REV BRAND W STRATEGIC 85 x 60-01.jpg
+|   |   |-- photos/          # Personal photos (1-15.jpeg)
+|   |   |-- products/        # Book covers
+|   |       |-- buku-utero-02.png  # Balik Jungkir book
+|   |-- *.svg                # Default Next.js SVGs
+|-- src/
+|   |-- app/
+|   |   |-- globals.css      # Global styles with CSS variables
+|   |   |-- layout.tsx       # Root layout with Inter font
+|   |   |-- page.tsx         # Main page component
+|   |   |-- favicon.ico      # Site favicon
+|   |-- components/
+|       |-- Awards.tsx       # Awards & achievements section
+|       |-- Button.tsx       # Reusable button component
+|       |-- Clients.tsx      # Client showcase section
+|       |-- Contact.tsx      # Contact CTA section
+|       |-- Download.tsx     # CV & E-book download section
+|       |-- Footer.tsx       # Site footer
+|       |-- Hero.tsx         # Hero section with slider
+|       |-- HeroImageSlider.tsx  # Animated hero image slider
+|       |-- Journey.tsx      # Timeline/journey section
+|       |-- Legacy.tsx       # Utero Indonesia promo section
+|       |-- Methodology.tsx  # Strategic framework section
+|       |-- Navbar.tsx       # Navigation with scroll spy
+|       |-- Philosophy.tsx   # About/philosophy section
+|       |-- PhilosophyImageSlider.tsx  # Photo grid gallery
+|       |-- Reveal.tsx       # Scroll animation wrapper
+|       |-- Services.tsx     # Services offering section
+|       |-- SocialProof.tsx  # Partner logos bar
+|-- package.json             # Project dependencies
+|-- tsconfig.json            # TypeScript configuration
+|-- next.config.ts           # Next.js configuration
+|-- postcss.config.mjs       # PostCSS configuration
+|-- eslint.config.mjs        # ESLint configuration
+|-- README.md                # Project readme
+
+================================================================================
+## DESIGN SYSTEM
+================================================================================
+
+### Color Palette (CSS Variables in globals.css)
+--primary:        #D71920  (Bold Red - Brand Color)
+--background:     #FFFFFF  (White)
+--background-alt: #F9FAFB  (Light Grey)
+--foreground:     #111111  (Almost Black - Headings)
+--text-body:      #4B5563  (Grey - Body Text)
+
+### Typography
+- Font Family: Inter (Google Font)
+- CSS Variable: --font-inter
+- Headings: Foreground color (#111111)
+- Body: Text-body color (#4B5563)
+
+### Component Variants (Button.tsx)
+- primary:  Red background, white text
+- outline:  Red border, red text
+- ghost:    Text only, hover red
+- white:    White background, red text
+
+================================================================================
+## PAGE SECTIONS (in order)
+================================================================================
+
+1. NAVBAR (Navbar.tsx)
+   - Fixed position, transparent -> white on scroll
+   - Logo: "DWC." with animated red dot
+   - Navigation links with scroll spy active state
+   - Framer Motion hover pill animation
+   - Mobile hamburger menu with fullscreen overlay
+   - CTA: "Ngopi & Diskusi" (Coffee & Discuss) -> WhatsApp
+
+2. HERO (Hero.tsx + HeroImageSlider.tsx)
+   - Full red background
+   - Tagline: "Mitra Strategis Brand untuk Pemilik Visioner"
+   - Subtitle about transitioning businesses
+   - Two CTAs: Schedule Consultation + View Portfolio
+   - Right side: Animated image slider with 4 layouts:
+     * Collage (cluster arrangement)
+     * Masonry (staggered vertical)
+     * Cards (row arrangement)
+     * Geometric (circle + shapes)
+   - Auto-rotates every 3 seconds
+
+3. SOCIAL PROOF (SocialProof.tsx)
+   - Grey background bar
+   - "Partner Komunitas" label
+   - Partner logos: ICCN, MCF, ADGI, AAM
+   - Grayscale filter on logos
+
+4. PHILOSOPHY (Philosophy.tsx + PhilosophyImageSlider.tsx)
+   - Section ID: #philosophy
+   - Title: "Branding Bukan Akting"
+   - Extended personal story/bio about Dadik Wahyu Chang
+   - Left side: Grid of 15 personal photos (2-3 columns)
+   - Story covers: background, education, mission, community work
+
+5. METHODOLOGY (Methodology.tsx)
+   - Section ID: #methodology
+   - Title: "Kerangka Strategis" (Strategic Framework)
+   - Three strategic maps:
+     * Brand W Strategic Map
+     * Branding Model Canvas
+     * Blueprint Kota Kreatif (Creative City Blueprint)
+
+6. SERVICES (Services.tsx)
+   - Section ID: #services
+   - 4 service cards in grid:
+     * Diskusi Strategis (Strategic Discussion)
+     * Identitas & Arahan Visual (Identity & Visual Direction)
+     * Mentoring Hukum & HAKI (Legal & IP Mentoring)
+     * Workshop Brand (Brand Workshop)
+   - Each with icon from Lucide React
+
+7. CLIENTS (Clients.tsx)
+   - Section ID: #clients
+   - Single image showing all client logos
+
+8. JOURNEY (Journey.tsx)
+   - Section ID: #journey
+   - Timeline from 1998-2025
+   - Alternating left/right layout on desktop
+   - Vertical line with markers
+   - 10 time periods with detailed activities
+   - Notable clients: Mie Gacoan, Ayam Nelongso, multiple cities, etc.
+
+9. LEGACY (Legacy.tsx)
+   - Dark grey background
+   - Title: "Mesin Eksekusi" (Execution Machine)
+   - Promotes UTERO INDONESIA
+   - Glow effects and pattern background
+   - CTA to visit uteroindonesia.com
+
+10. AWARDS (Awards.tsx)
+    - Section ID: #award
+    - Trophy image on left
+    - 6 notable achievements listed
+    - Includes Sampoerna Foundation, Bank Mandiri, EXPO 2020 Dubai
+
+11. DOWNLOAD (Download.tsx)
+    - Section ID: #download
+    - Two columns:
+      * CV Download (PDF link)
+      * E-book "Balik Jungkir" purchase (WhatsApp)
+
+12. CONTACT (Contact.tsx)
+    - Section ID: #contact
+    - Casual invitation: "Punya Ide Liar? Mari Kita Wujudkan"
+    - Two CTAs:
+      * WhatsApp: "Ngopi & Diskusi"
+      * Email: hello@dadikwahyuchang.id
+
+13. FOOTER (Footer.tsx)
+    - Black background
+    - Name and title
+    - Location: Rumah Merah OXYZ, Malang
+    - Copyright 2026
+
+================================================================================
+## REUSABLE COMPONENTS
+================================================================================
+
+### Button (Button.tsx)
+- Supports: href (Link) or button mode
+- Variants: primary, outline, ghost, white
+- Features: hover scale, active scale
+- Props: children, variant, className, href, target
+
+### Reveal (Reveal.tsx)
+- Scroll-triggered animation wrapper
+- Uses Framer Motion + useInView
+- Props: width, delay, duration, yOffset, className
+- Default: 0.25s delay, 0.5s duration, 75px y-offset
+
+================================================================================
+## ANIMATIONS
+================================================================================
+
+### Framer Motion Usage
+- Hero stagger children animations
+- Navbar hover pill with layoutId
+- Mobile menu entrance/exit
+- HeroImageSlider layout transitions
+- All sections use Reveal component for entrance
+
+### CSS Transitions
+- Button hover/active scale
+- Navbar background on scroll
+- Service card hover effects
+- Image hover zoom
+
+================================================================================
+## EXTERNAL LINKS & CONTACTS
+================================================================================
+
+### WhatsApp
+- Main: wa.me/6281999900900
+- Book purchase: 62817388616
+
+### Websites
+- Portfolio: dadikwahyuchang.id
+- Company: uteroindonesia.com
+
+### Email
+- hello@dadikwahyuchang.id
+
+### CV Download
+- dadikwahyuchang.id/wp-content/uploads/2024/11/cv-dadik-2024.pdf
+
+================================================================================
+## NPM SCRIPTS
+================================================================================
+
+"dev":   next dev          # Development server
+"build": next build        # Production build
+"start": next start        # Start production server
+"lint":  eslint            # Run ESLint
+
+================================================================================
+## SPECIAL FEATURES
+================================================================================
+
+1. React Compiler enabled (experimental optimization)
+2. Scroll Spy navigation with IntersectionObserver
+3. Smooth scroll navigation
+4. Responsive design (mobile-first with md: breakpoints)
+5. Image optimization with next/image
+6. Font optimization with next/font
+7. Indonesian language content (Bahasa Indonesia)
+
+================================================================================
+## KNOWN IMAGE REFERENCES
+================================================================================
+
+### Hero Slider (brand-overview/)
+1.png to 12.png - Brand portfolio images
+
+### Philosophy Gallery (photos/)
+1.jpeg to 15.jpeg - Personal/activity photos
+
+### Partner Logos (logos/)
+- ICCN.png, MCF.png, ADGI.webp, AAM.png, MCC.png
+
+### Strategic Maps (maps/)
+- REV BRAND W STRATEGIC 85 x 60-01.jpg
+- branding model canvas.jpg
+- blueprint-kota-kreatif.png
+
+### Other
+- awards/award.png - Trophy image
+- clients/clients.png - Client logos compilation
+- products/buku-utero-02.png - Book cover
+
+================================================================================
+## COMMUNITY AFFILIATIONS
+================================================================================
+
+- ICCN: Indonesian Creative Cities Network
+- MCF: Malang Creative Fusion
+- ADGI: Asosiasi Desain Grafis Indonesia (Chapter Malang)
+- AAM: Asosiasi Advertising Malang
+- MCC: Malang Creative Center
+- PMK3I: Persatuan Masyarakat Kreatif Kota Kreatif Indonesia
+
+================================================================================
+## END OF PROJECT MEMORY
+================================================================================

@@ -1,0 +1,39 @@
+Backup CTA Hero sebelum pembaruan 2026-09-04.
+
+<motion.div 
+  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+  className="grid gap-3 pt-4 sm:grid-cols-2 sm:gap-4"
+>
+  <Button 
+    href="https://wa.me/6281999900900"
+    target="_blank"
+    variant="white" 
+    className="w-full border-transparent font-bold shadow-xl"
+  >
+    Jadwalkan Sesi Konsultasi
+    <ArrowRight className="w-4 h-4 ml-2" />
+  </Button>
+  <Button 
+    href="http://utero.id/"
+    target="_blank"
+    className="w-full bg-primary text-white border-2 border-white hover:bg-white hover:text-primary font-bold shadow-lg"
+  >
+    Lihat Portofolio
+  </Button>
+  <Button
+    href="https://api.whatsapp.com/send/?phone=6285940834227&text=Halo+DWC.AI%2C+aku+mendapatkan+informasi+dari+Websitenya+%2Adadikwahyuchang.id%2A.%0AIngin+bertanya+nih+%3F+&type=phone_number&app_absent=0"
+    target="_blank"
+    className="w-full bg-white/10 text-white border-2 border-white/70 hover:bg-white hover:text-primary font-bold shadow-lg"
+  >
+    <BotMessageSquare className="mr-2 h-4 w-4" />
+    DWC.AI Agent
+  </Button>
+  <Button
+    href="https://wa.me/6281999900900?text=Halo%20DWC.AI%2C%20aku%20ingin%20Chat%20Konsultan%20Branding."
+    target="_blank"
+    className="w-full bg-white/10 text-white border-2 border-white/70 hover:bg-white hover:text-primary font-bold shadow-lg"
+  >
+    <MessageCircle className="mr-2 h-4 w-4" />
+    Chat Konsultan Branding Private
+  </Button>
+</motion.div>

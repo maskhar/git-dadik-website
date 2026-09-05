@@ -1,0 +1,12 @@
+{
+  "project": "branding-dadik",
+  "depth": "standard",
+  "mode": "interactive",
+  "gates": {
+    "confirm_phases": true,
+    "confirm_plans": true,
+    "confirm_execution": false
+  },
+  "created": "2026-01-19",
+  "version": "1.0"
+}
