@@ -90,9 +90,9 @@ export const Hero = () => {
               Konsultasi Branding Pribadi
             </Button>
             <Button
-              disabled
-              aria-disabled="true"
-              className="cta-breath cta-breath-delay w-full cursor-not-allowed border-2 border-white/30 bg-white/5 text-white/60 font-bold shadow-none hover:scale-100"
+              href="https://carubra.com"
+              target="_blank"
+              className="cta-breath cta-breath-delay w-full border-2 border-white/70 bg-white/10 text-white font-bold shadow-lg hover:bg-white hover:text-primary"
             >
               <Building2 className="mr-2 h-4 w-4" />
               Carubra.com — Developer AI Agent
