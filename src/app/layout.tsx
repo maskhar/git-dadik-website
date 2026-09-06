@@ -5,14 +5,14 @@ import "./globals.css";
 import { Chatbot } from "@/components/Chatbot";
 import { JsonLd } from "@/components/JsonLd";
 
-const GA_MEASUREMENT_ID = "G-768XTFFCSW";
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-768XTFFCSW";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const siteUrl = "https://dadikwahyuchang.com";
+const siteUrl = "https://dadikwahyuchang.id";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -55,9 +55,7 @@ export const metadata: Metadata = {
     description: "Membantu bisnis bertransformasi dari 'Komoditas' menjadi 'Legacy' melalui Brand Strategy, Brand Identity, dan Legal Protection.",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "/images/photos/3%20pak%20dadik.png",
         alt: "Dadik Wahyu Chang - Strategic Brand Consultant",
       },
     ],
@@ -68,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dadik Wahyu Chang | Strategic Brand Consultant",
     description: "Membantu bisnis bertransformasi dari 'Komoditas' menjadi 'Legacy'",
-    images: ["/og-image.jpg"],
+    images: ["/images/photos/3%20pak%20dadik.png"],
     creator: "@dadikwahyuchang",
   },
   
@@ -113,7 +111,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
+            gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: true });
           `}
         </Script>
       </head>

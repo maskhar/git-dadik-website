@@ -2,12 +2,12 @@ export const JsonLd = () => {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://dadikwahyuchang.com/#person",
+    "@id": "https://dadikwahyuchang.id/#person",
     name: "Dadik Wahyu Chang",
     jobTitle: "Strategic Brand Consultant",
     description: "Konsultan brand strategis yang membantu bisnis bertransformasi dari 'Komoditas' menjadi 'Legacy' melalui Brand Strategy, Brand Identity, dan Legal Protection.",
-    url: "https://dadikwahyuchang.com",
-    image: "https://dadikwahyuchang.com/dadik-profile.jpg",
+    url: "https://dadikwahyuchang.id",
+    image: "https://dadikwahyuchang.id/images/photos/3%20pak%20dadik.png",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Malang",
@@ -35,12 +35,12 @@ export const JsonLd = () => {
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": "https://dadikwahyuchang.com/#business",
+    "@id": "https://dadikwahyuchang.id/#business",
     name: "Dadik Wahyu Chang - Brand Consulting",
     description: "Layanan konsultasi brand strategis meliputi Brand Strategy, Brand Identity, dan Legal Protection untuk bisnis di Indonesia.",
-    url: "https://dadikwahyuchang.com",
-    logo: "https://dadikwahyuchang.com/logo.png",
-    image: "https://dadikwahyuchang.com/og-image.jpg",
+    url: "https://dadikwahyuchang.id",
+    logo: "https://dadikwahyuchang.id/favicon.svg",
+    image: "https://dadikwahyuchang.id/images/photos/3%20pak%20dadik.png",
     telephone: "+6281999900900",
     email: "dadikwah75@gmail.com",
     address: {
@@ -60,7 +60,7 @@ export const JsonLd = () => {
     },
     priceRange: "$$",
     founder: {
-      "@id": "https://dadikwahyuchang.com/#person"
+      "@id": "https://dadikwahyuchang.id/#person"
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -97,12 +97,12 @@ export const JsonLd = () => {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://dadikwahyuchang.com/#website",
-    url: "https://dadikwahyuchang.com",
+    "@id": "https://dadikwahyuchang.id/#website",
+    url: "https://dadikwahyuchang.id",
     name: "Dadik Wahyu Chang",
     description: "Strategic Brand Consultant - From Commodity to Legacy",
     publisher: {
-      "@id": "https://dadikwahyuchang.com/#person"
+      "@id": "https://dadikwahyuchang.id/#person"
     },
     inLanguage: "id-ID"
   };

@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
     "http://dadikwahyuchang.id",
     "https://dadikwahyuchang.id",
     "*.carubra.com",
+    "http://20.20.20.26"
   ]
     
 };
