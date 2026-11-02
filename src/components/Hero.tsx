@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Button } from './Button';
-import { ArrowRight, BotMessageSquare, BriefcaseBusiness, Building2, MapPin, MessageCircle, Palette, Sparkles } from 'lucide-react';
+import { ArrowRight, BookOpen, BotMessageSquare, BriefcaseBusiness, Building2, Calculator, MapPin, MessageCircle, Palette, Sparkles, Users } from 'lucide-react';
 import { HeroImageSlider } from './HeroImageSlider';
 
 export const Hero = () => {
@@ -112,6 +112,30 @@ export const Hero = () => {
             >
               <BriefcaseBusiness className="mr-2 h-4 w-4" />
               Portofolio Bisnis
+            </Button>
+            <Button
+              href="https://buku.dadikwahyuchang.id/"
+              target="_blank"
+              className="w-full bg-white/10 text-white border-2 border-white/70 hover:bg-white hover:text-primary font-bold shadow-lg"
+            >
+              <BookOpen className="mr-2 h-4 w-4" />
+              Buku Dadik Wahyu Chang
+            </Button>
+            <Button
+              href="https://kalkulatorhargadesain.dadikwahyuchang.id/"
+              target="_blank"
+              className="w-full bg-white/10 text-white border-2 border-white/70 hover:bg-white hover:text-primary font-bold shadow-lg"
+            >
+              <Calculator className="mr-2 h-4 w-4" />
+              Kalkulator Harga Desain
+            </Button>
+            <Button
+              href="https://kolkulatorkol.dadikwahyuchang.id/"
+              target="_blank"
+              className="w-full bg-white/10 text-white border-2 border-white/70 hover:bg-white hover:text-primary font-bold shadow-lg"
+            >
+              <Users className="mr-2 h-4 w-4" />
+              Kalkulator KOL
             </Button>
           </motion.div>
         </motion.div>

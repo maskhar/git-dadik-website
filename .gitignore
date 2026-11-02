@@ -51,3 +51,4 @@ next-env.d.ts
 /AGENTS.md
 /GEMINI.md
 /http-server/package-lock.json
+.codegraphy/*
